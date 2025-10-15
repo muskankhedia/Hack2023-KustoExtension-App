@@ -13,7 +13,7 @@ In the project directory, you can run:
 ## Steps to build
 
 - Create a json file in [./react-kusto-extension/src](./react-kusto-extension/src) name it "apikey.json"
-- Add JSON value in apikey.json with Open AI API Key in the given [format](ApiKeyFormat.json)
+- Add JSON value in apikey.json with Open AI API Key in the given [format](apiKeyFormat.json)
 - On Command prompt run "Cd ./react-kusto-extension"
 - Run "npm install"
 - Run "npm run build"
