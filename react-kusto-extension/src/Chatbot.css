@@ -1,0 +1,214 @@
+/* Chatbot container */
+.chatbot {
+  z-index: 100;
+  width: 500px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(241, 241, 241, 0.9);
+  /* border-radius: 15px;
+  padding: 10px; */
+}
+
+/* Toggle button */
+.toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Closed chatbot style */
+.chatbot.closed {
+  border: none;
+  background: none;
+}
+
+/* Button hover effect */
+.toggle-button:hover {
+  background-color: #ebeff3;
+}
+
+/* Chatbot input style */
+.chatbot-input {
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Message containers */
+.message.user, .message.bot, .chatbot-input input, .chatbot-input button {
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+/* Message hover effect */
+.message.user:hover, .message.bot:hover {
+  transform: scale(1.02);
+}
+
+/* Input focus style */
+.chatbot-input input:focus {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Body font */
+body {
+  font-family: 'Your Custom Font', sans-serif;
+}
+
+/* User message style */
+.message.user {
+  position: relative;
+  background-color: #004578;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  padding: 8px 10px 8px 10px;
+}
+
+/* Bot message style */
+.message.bot {
+  position: relative;
+  background-color: #f0f0f0;
+  color: #555;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  padding: 8px 10px 8px 10px;
+}
+
+/* Message animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.message {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Chatbot message container style */
+.chatbot-messages {
+  height: 400px;
+  overflow-y: scroll;
+  padding: 10px 0px;
+}
+
+/* Open chatbot toggle button */
+.toggle-button-open {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: #004578;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Chatbot header style */
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  background: #004578;
+}
+
+/* Chatbot input container style */
+.chatbot-input {
+  display: flex;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Chatbot input field style */
+.chatbot-input input {
+  flex-grow: 1;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Chatbot input button style */
+.chatbot-input button {
+  padding: 5px 10px;
+  background-color: #0F6CBD;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Chatbot.css */
+@keyframes loading {
+  0% {
+    content: "\2022"; /* Use a bullet character (round) */
+    font-size: 24px; /* Adjust the font size for a bigger dot */
+  }
+  25% {
+    content: "\2022\2022";
+  }
+  50% {
+    content: "\2022\2022\2022";
+  }
+  75% {
+    content: "\2022\2022";
+  }
+  100% {
+    content: "\2022";
+  }
+}
+
+/* Apply the class for loading animation */
+.bot-loading {
+  display: inline-block;
+  white-space: nowrap;
+  animation: loading 1s steps(4) infinite;
+  color: #0074d9;
+  vertical-align: middle;
+}
+
+.extension-header {
+  padding: 0px 10px;
+  color: white;
+}
+
+/* Chatbot.css */
+.example-questions {
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.example-questions button {
+  background-color: #0074d9; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  margin-right: 10px; /* Margin between buttons */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.example-questions button:hover {
+  background-color: #0056b3; /* Hover background color */
+}
+
+/* You can add more styles as needed */
+
+
+.inputMessage {
+  height: 15px;
+}

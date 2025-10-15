@@ -1,0 +1,4 @@
+{
+    "endpoint": "https://{AzureOpenAIDeployment}.openai.azure.com/openai/deployments/gpt-35-turbo-16k/chat/completions?api-version=2023-07-01-preview", 
+    "key" : "{api-key}"
+}

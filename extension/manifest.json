@@ -1,0 +1,40 @@
+{
+    "name": "Kusto-Extension",
+    "description": "An OpenAI extension for Kusto",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+      "16": "kusto-openai.png",
+      "48": "kusto-openai.png",
+      "128": "kusto-openai.png"
+    },
+    "action": {
+      "default_icon": "kusto-openai.png",
+      "default_title": "KustoExtension",
+      "default_popup": "popup.html"
+    },
+    "permissions":  [
+      "webRequest",
+      "activeTab",
+      "tabs",
+      "debugger",
+      "storage"
+    ],
+    "host_permissions": ["https://www.google.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://dataexplorer.azure.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [ "img/*" ],
+        "matches": ["https://dataexplorer.azure.com/*"]
+      }
+    ]
+  }
